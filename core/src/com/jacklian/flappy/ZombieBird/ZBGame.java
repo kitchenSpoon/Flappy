@@ -1,8 +1,8 @@
-package com.kilobolt.ZombieBird;
+package com.jacklian.flappy.ZombieBird;
 
 import com.badlogic.gdx.Game;
-import com.kilobolt.Screens.SplashScreen;
-import com.kilobolt.ZBHelpers.AssetLoader;
+import com.jacklian.flappy.Screens.SplashScreen;
+import com.jacklian.flappy.ZBHelpers.AssetLoader;
 
 public class ZBGame extends Game {
 

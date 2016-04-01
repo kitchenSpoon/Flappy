@@ -1,4 +1,4 @@
-package com.kilobolt.ZBHelpers;
+package com.jacklian.flappy.ZBHelpers;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
@@ -76,7 +76,7 @@ public class AssetLoader {
 
 		TextureRegion[] birds = { birdDown, bird, birdUp };
 		birdAnimation = new Animation(0.06f, birds);
-		birdAnimation.setPlayMode(Animation.LOOP_PINGPONG);
+		birdAnimation.setPlayMode(Animation.PlayMode.LOOP_PINGPONG);
 
 		skullUp = new TextureRegion(texture, 192, 0, 24, 14);
 		// Create by flipping existing skullUp
@@ -92,13 +92,13 @@ public class AssetLoader {
 		fall = Gdx.audio.newSound(Gdx.files.internal("data/fall.wav"));
 
 		font = new BitmapFont(Gdx.files.internal("data/text.fnt"));
-		font.setScale(.25f, -.25f);
+		font.getData().setScale(.25f, -.25f);
 
 		whiteFont = new BitmapFont(Gdx.files.internal("data/whitetext.fnt"));
-		whiteFont.setScale(.1f, -.1f);
+		whiteFont.getData().setScale(.1f, -.1f);
 
 		shadow = new BitmapFont(Gdx.files.internal("data/shadow.fnt"));
-		shadow.setScale(.25f, -.25f);
+		shadow.getData().setScale(.25f, -.25f);
 
 		// Create (or retrieve existing) preferences file
 		prefs = Gdx.app.getPreferences("ZombieBird");

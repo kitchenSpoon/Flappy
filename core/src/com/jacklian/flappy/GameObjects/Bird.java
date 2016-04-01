@@ -1,8 +1,8 @@
-package com.kilobolt.GameObjects;
+package com.jacklian.flappy.GameObjects;
 
 import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Vector2;
-import com.kilobolt.ZBHelpers.AssetLoader;
+import com.jacklian.flappy.ZBHelpers.AssetLoader;
 
 public class Bird {
 

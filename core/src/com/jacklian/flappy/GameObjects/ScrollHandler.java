@@ -1,7 +1,7 @@
-package com.kilobolt.GameObjects;
+package com.jacklian.flappy.GameObjects;
 
-import com.kilobolt.GameWorld.GameWorld;
-import com.kilobolt.ZBHelpers.AssetLoader;
+import com.jacklian.flappy.GameWorld.GameWorld;
+import com.jacklian.flappy.ZBHelpers.AssetLoader;
 
 public class ScrollHandler {
 

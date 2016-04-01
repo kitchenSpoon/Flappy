@@ -1,4 +1,23 @@
-package com.kilobolt.GameWorld;
+package com.jacklian.flappy.GameWorld;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import com.jacklian.flappy.GameObjects.Bird;
+import com.jacklian.flappy.GameObjects.Grass;
+import com.jacklian.flappy.GameObjects.Pipe;
+import com.jacklian.flappy.GameObjects.ScrollHandler;
+import com.jacklian.flappy.TweenAccessors.Value;
+import com.jacklian.flappy.TweenAccessors.ValueAccessor;
+import com.jacklian.flappy.ZBHelpers.AssetLoader;
+import com.jacklian.flappy.ZBHelpers.InputHandler;
+import com.jacklian.flappy.ui.SimpleButton;
 
 import java.util.List;
 
@@ -6,28 +25,11 @@ import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenEquations;
 import aurelienribon.tweenengine.TweenManager;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
-import com.kilobolt.GameObjects.Bird;
-import com.kilobolt.GameObjects.Grass;
-import com.kilobolt.GameObjects.Pipe;
-import com.kilobolt.GameObjects.ScrollHandler;
-import com.kilobolt.TweenAccessors.Value;
-import com.kilobolt.TweenAccessors.ValueAccessor;
-import com.kilobolt.ZBHelpers.AssetLoader;
-import com.kilobolt.ZBHelpers.InputHandler;
-import com.kilobolt.ui.SimpleButton;
+
 
 public class GameRenderer {
 
-	private GameWorld myWorld;
+	private com.jacklian.flappy.GameWorld.GameWorld myWorld;
 	private OrthographicCamera cam;
 	private ShapeRenderer shapeRenderer;
 
@@ -54,7 +56,7 @@ public class GameRenderer {
 	private List<SimpleButton> menuButtons;
 	private Color transitionColor;
 
-	public GameRenderer(GameWorld world, int gameHeight, int midPointY) {
+	public GameRenderer(com.jacklian.flappy.GameWorld.GameWorld world, int gameHeight, int midPointY) {
 		myWorld = world;
 
 		this.midPointY = midPointY;
@@ -246,7 +248,7 @@ public class GameRenderer {
 	public void render(float delta, float runTime) {
 
 		Gdx.gl.glClearColor(0, 0, 0, 1);
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		shapeRenderer.begin(ShapeType.Filled);
 
@@ -314,14 +316,14 @@ public class GameRenderer {
 	private void drawTransition(float delta) {
 		if (alpha.getValue() > 0) {
 			manager.update(delta);
-			Gdx.gl.glEnable(GL10.GL_BLEND);
-			Gdx.gl.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
+			Gdx.gl.glEnable(GL20.GL_BLEND);
+			Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
 			shapeRenderer.begin(ShapeType.Filled);
 			shapeRenderer.setColor(transitionColor.r, transitionColor.g,
 					transitionColor.b, alpha.getValue());
 			shapeRenderer.rect(0, 0, 136, 300);
 			shapeRenderer.end();
-			Gdx.gl.glDisable(GL10.GL_BLEND);
+			Gdx.gl.glDisable(GL20.GL_BLEND);
 
 		}
 	}

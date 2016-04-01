@@ -1,4 +1,4 @@
-package com.kilobolt.GameObjects;
+package com.jacklian.flappy.GameObjects;
 
 import java.util.Random;
 

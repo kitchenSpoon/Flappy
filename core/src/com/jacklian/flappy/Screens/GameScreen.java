@@ -1,10 +1,10 @@
-package com.kilobolt.Screens;
+package com.jacklian.flappy.Screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.kilobolt.GameWorld.GameRenderer;
-import com.kilobolt.GameWorld.GameWorld;
-import com.kilobolt.ZBHelpers.InputHandler;
+import com.jacklian.flappy.GameWorld.GameRenderer;
+import com.jacklian.flappy.GameWorld.GameWorld;
+import com.jacklian.flappy.ZBHelpers.InputHandler;
 
 public class GameScreen implements Screen {
 

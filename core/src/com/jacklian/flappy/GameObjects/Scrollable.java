@@ -1,4 +1,4 @@
-package com.kilobolt.GameObjects;
+package com.jacklian.flappy.GameObjects;
 
 import com.badlogic.gdx.math.Vector2;
 

@@ -1,4 +1,4 @@
-package com.kilobolt.TweenAccessors;
+package com.jacklian.flappy.TweenAccessors;
 
 import aurelienribon.tweenengine.TweenAccessor;
 

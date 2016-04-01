@@ -1,13 +1,13 @@
-package com.kilobolt.ZBHelpers;
+package com.jacklian.flappy.ZBHelpers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputProcessor;
-import com.kilobolt.GameObjects.Bird;
-import com.kilobolt.GameWorld.GameWorld;
-import com.kilobolt.ui.SimpleButton;
+import com.jacklian.flappy.GameObjects.Bird;
+import com.jacklian.flappy.GameWorld.GameWorld;
+import com.jacklian.flappy.ui.SimpleButton;
 
 public class InputHandler implements InputProcessor {
 	private Bird myBird;
