@@ -27,7 +27,7 @@ public class AssetLoader {
 
 		logo = new TextureRegion(logoTexture, 0, 0, 512, 114);
 
-		texture = new Texture(Gdx.files.internal("data/texture.png"));
+		texture = new Texture(Gdx.files.internal("data/texture2.png"));
 		texture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 
 		playButtonUp = new TextureRegion(texture, 0, 83, 29, 16);
@@ -65,13 +65,16 @@ public class AssetLoader {
 		grass = new TextureRegion(texture, 0, 43, 143, 11);
 		grass.flip(false, true);
 
-		birdDown = new TextureRegion(texture, 136, 0, 17, 12);
+//		birdDown = new TextureRegion(texture, 136, 0, 17, 12);
+		birdDown = new TextureRegion(texture, 136, 0, 23, 23);
 		birdDown.flip(false, true);
 
-		bird = new TextureRegion(texture, 153, 0, 17, 12);
+//		bird = new TextureRegion(texture, 153, 0, 17, 12);
+		bird = new TextureRegion(texture, 136, 0, 23, 23);
 		bird.flip(false, true);
 
-		birdUp = new TextureRegion(texture, 170, 0, 17, 12);
+//		birdUp = new TextureRegion(texture, 170, 0, 17, 12);
+		birdUp = new TextureRegion(texture, 136, 0, 23, 23);
 		birdUp.flip(false, true);
 
 		TextureRegion[] birds = { birdDown, bird, birdUp };
@@ -83,7 +86,7 @@ public class AssetLoader {
 		skullDown = new TextureRegion(skullUp);
 		skullDown.flip(false, true);
 
-		bar = new TextureRegion(texture, 136, 16, 22, 3);
+		bar = new TextureRegion(texture, 136, 24, 22, 3);
 		bar.flip(false, true);
 
 		dead = Gdx.audio.newSound(Gdx.files.internal("data/dead.wav"));
