@@ -2,11 +2,11 @@ package com.jacklian.flappy.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.jacklian.flappy.MyGdxGame;
+import com.jacklian.flappy.ZombieBird.ZBGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new MyGdxGame(), config);
+		new LwjglApplication(new ZBGame(), config);
 	}
 }

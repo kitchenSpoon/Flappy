@@ -1,17 +1,17 @@
 package com.jacklian.flappy;
 
-import org.robovm.apple.foundation.NSAutoreleasePool;
-import org.robovm.apple.uikit.UIApplication;
-
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
-import com.jacklian.flappy.MyGdxGame;
+import com.jacklian.flappy.ZombieBird.ZBGame;
+
+import org.robovm.apple.foundation.NSAutoreleasePool;
+import org.robovm.apple.uikit.UIApplication;
 
 public class IOSLauncher extends IOSApplication.Delegate {
     @Override
     protected IOSApplication createApplication() {
         IOSApplicationConfiguration config = new IOSApplicationConfiguration();
-        return new IOSApplication(new MyGdxGame(), config);
+        return new IOSApplication(new ZBGame(), config);
     }
 
     public static void main(String[] argv) {
